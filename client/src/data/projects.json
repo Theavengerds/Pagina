@@ -1,0 +1,41 @@
+[
+  {
+    "id": "1",
+    "title": "Edificio Corporativo Las Condes",
+    "discipline": "Ingeniería Estructural",
+    "location": "Santiago, Chile",
+    "tags": ["Memoria de cálculo", "Planos"],
+    "image": "project-1",
+    "year": "2023",
+    "scope": "Cálculo estructural completo para edificio de 10 pisos con 3 niveles de subterráneo.",
+    "deliverables": "Memorias de cálculo, planos de estructura, especificaciones técnicas.",
+    "tools": ["ETABS", "SAP2000", "Revit"],
+    "solution": "Se implementó un sistema sismorresistente optimizado que redujo los costos de material en un 15% cumpliendo con NCh433."
+  },
+  {
+    "id": "2",
+    "title": "Condominio Vista Mar",
+    "discipline": "Ingeniería Sanitaria",
+    "location": "Viña del Mar, Chile",
+    "tags": ["Agua potable", "Alcantarillado", "Tramitación"],
+    "image": "project-2",
+    "year": "2023",
+    "scope": "Diseño de redes sanitarias para complejo residencial de 120 departamentos.",
+    "deliverables": "Planos sanitarios, memorias de cálculo, tramitación ante ESVAL.",
+    "tools": ["AutoCAD MEP", "WaterCAD"],
+    "solution": "Diseño eficiente de presiones y estanques de acumulación para garantizar suministro continuo ante cortes."
+  },
+  {
+    "id": "3",
+    "title": "Centro Logístico Norte",
+    "discipline": "Permisos de Edificación",
+    "location": "Antofagasta, Chile",
+    "tags": ["Expediente", "Coordinación"],
+    "image": "project-1",
+    "year": "2022",
+    "scope": "Gestión integral para obtención de permiso de edificación de centro de distribución de 10.000m2.",
+    "deliverables": "Carpeta municipal, resolución de observaciones, permiso aprobado.",
+    "tools": ["AutoCAD", "Gestión DOM"],
+    "solution": "Coordinación precisa entre 5 especialidades que permitió obtener el permiso en un plazo 20% menor al promedio municipal."
+  }
+]

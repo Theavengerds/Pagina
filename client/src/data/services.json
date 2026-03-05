@@ -1,0 +1,44 @@
+[
+  {
+    "id": "estructural",
+    "title": "Ingeniería Estructural",
+    "icon": "building",
+    "features": ["Modelación y cálculo", "Memorias", "Planos", "Especificaciones"]
+  },
+  {
+    "id": "sanitaria",
+    "title": "Ingeniería Sanitaria",
+    "icon": "droplets",
+    "features": ["Agua potable", "Alcantarillado", "Aguas lluvias", "Soluciones de infiltración"]
+  },
+  {
+    "id": "electrica",
+    "title": "Ingeniería Eléctrica (TE1)",
+    "icon": "zap",
+    "features": ["Diseño y regularización", "Memorias", "Planos", "Coordinación normativa"]
+  },
+  {
+    "id": "imiv",
+    "title": "IMIV",
+    "icon": "car",
+    "features": ["Informes y tramitación", "Coordinación con arquitectura/urbanismo"]
+  },
+  {
+    "id": "permisos",
+    "title": "Permisos de Edificación",
+    "icon": "file-check",
+    "features": ["Expedientes", "Coordinación de especialidades", "Apoyo en observaciones"]
+  },
+  {
+    "id": "regularizaciones",
+    "title": "Regularizaciones",
+    "icon": "clipboard-list",
+    "features": ["Levantamiento", "Antecedentes", "Planos as-built", "Informes técnicos"]
+  },
+  {
+    "id": "obras-menores",
+    "title": "Obras menores / Apoyo",
+    "icon": "hammer",
+    "features": ["Detalles", "Cubicaciones básicas", "Soporte técnico y coordinación"]
+  }
+]
