@@ -21,18 +21,18 @@ export function Navbar() {
     { name: "Contacto", href: "#contacto" },
   ];
 
+  const logoUrl = "https://res.cloudinary.com/dlimdjyod/image/upload/v1772682467/MA_ingenieria_logo_opcion1_transparente_n7ydyf.png";
+
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/95 backdrop-blur-md shadow-sm py-3" : "bg-transparent py-5"
+        scrolled ? "bg-background/80 backdrop-blur-md shadow-lg py-3 border-b border-white/5" : "bg-transparent py-5"
       }`}
     >
       <div className="container mx-auto px-4 md:px-8 max-w-7xl flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-primary rounded-md flex items-center justify-center text-white font-heading font-bold text-xl">
-            M&A
-          </div>
-          <span className={`font-heading font-semibold text-lg hidden sm:block ${scrolled ? "text-foreground" : "text-foreground"}`}>
+          <img src={logoUrl} alt="M&A Ingeniería" className="h-10 md:h-12 w-auto object-contain" />
+          <span className="font-heading font-semibold text-lg hidden sm:block text-foreground">
             Marquez & Aguirre
           </span>
         </a>

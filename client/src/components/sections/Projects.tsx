@@ -17,8 +17,10 @@ export function Projects() {
   const [selectedProject, setSelectedProject] = useState<typeof projectsData[0] | null>(null);
 
   return (
-    <section id="proyectos" className="py-24 bg-slate-50">
-      <div className="container mx-auto px-4 md:px-8 max-w-7xl">
+    <section id="proyectos" className="py-24 bg-background border-y border-white/5 relative">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent pointer-events-none"></div>
+      
+      <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="max-w-2xl">
             <h2 className="text-sm font-bold text-primary tracking-wider uppercase mb-3">Portafolio</h2>
@@ -34,39 +36,39 @@ export function Projects() {
           {projectsData.map((project, index) => (
             <div 
               key={project.id}
-              className={`group relative overflow-hidden rounded-xl bg-white border border-border cursor-pointer hover:shadow-xl transition-all duration-300 ${
+              className={`group relative overflow-hidden rounded-xl bg-card border border-white/10 cursor-pointer hover:shadow-2xl transition-all duration-500 ${
                 index === 0 ? "md:col-span-2 md:row-span-2" : ""
               }`}
               onClick={() => setSelectedProject(project)}
             >
-              <div className={`relative w-full ${index === 0 ? "h-64 md:h-[400px]" : "h-64"} overflow-hidden bg-slate-100`}>
+              <div className={`relative w-full ${index === 0 ? "h-64 md:h-[400px]" : "h-64"} overflow-hidden bg-slate-900`}>
                 {/* Fallback image if mapping fails */}
                 <img 
                   src={imageMap[project.image] || project1Img} 
                   alt={project.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-out grayscale group-hover:grayscale-0"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-90" />
                 
                 {/* Overlay on Hover */}
-                <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
-                  <span className="text-white font-semibold text-lg border-2 border-white/30 px-6 py-3 rounded-full">
+                <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-sm">
+                  <span className="text-white font-semibold text-lg border border-white/30 px-8 py-3 rounded-full hover:bg-white hover:text-primary transition-colors">
                     Ver detalle
                   </span>
                 </div>
               </div>
               
-              <div className="absolute bottom-0 left-0 w-full p-6 text-white pointer-events-none">
+              <div className="absolute bottom-0 left-0 w-full p-6 text-foreground pointer-events-none z-10">
                 <div className="flex flex-wrap gap-2 mb-3">
-                  <span className="px-2.5 py-1 text-xs font-semibold bg-primary rounded-md text-white">
+                  <span className="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider bg-primary/20 border border-primary/30 rounded-md text-primary">
                     {project.discipline}
                   </span>
                 </div>
-                <h4 className={`font-heading font-bold ${index === 0 ? "text-2xl md:text-3xl" : "text-xl"} mb-2`}>
+                <h4 className={`font-heading font-bold ${index === 0 ? "text-2xl md:text-3xl" : "text-xl"} mb-2 group-hover:text-primary transition-colors`}>
                   {project.title}
                 </h4>
-                <div className="flex items-center text-white/80 text-sm">
-                  <MapPin className="w-4 h-4 mr-1" />
+                <div className="flex items-center text-muted-foreground text-sm">
+                  <MapPin className="w-4 h-4 mr-1 text-primary" />
                   {project.location}
                 </div>
               </div>
@@ -78,14 +80,14 @@ export function Projects() {
       {/* Project Detail Modal */}
       <Dialog open={!!selectedProject} onOpenChange={(open) => !open && setSelectedProject(null)}>
         {selectedProject && (
-          <DialogContent className="max-w-3xl p-0 overflow-hidden bg-white border-0">
+          <DialogContent className="max-w-3xl p-0 overflow-hidden bg-card border border-white/10 text-foreground">
             <div className="h-64 sm:h-80 relative">
               <img 
                 src={imageMap[selectedProject.image] || project1Img} 
                 alt={selectedProject.title} 
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
               <div className="absolute bottom-6 left-6 text-white">
                 <Badge className="bg-primary hover:bg-primary/90 mb-3 border-0">{selectedProject.discipline}</Badge>
                 <DialogTitle className="text-3xl font-heading text-white">{selectedProject.title}</DialogTitle>
@@ -109,7 +111,7 @@ export function Projects() {
                     <h4 className="text-lg font-bold font-heading mb-3 text-foreground">Tags</h4>
                     <div className="flex flex-wrap gap-2">
                       {selectedProject.tags.map(tag => (
-                        <Badge key={tag} variant="secondary" className="bg-slate-100 text-slate-700 hover:bg-slate-200 border-border">
+                        <Badge key={tag} variant="secondary" className="bg-white/5 text-muted-foreground hover:bg-white/10 border-white/10">
                           {tag}
                         </Badge>
                       ))}
@@ -117,35 +119,35 @@ export function Projects() {
                   </div>
                 </div>
                 
-                <div className="bg-slate-50 p-6 rounded-xl border border-border h-fit space-y-6">
+                <div className="bg-white/5 p-6 rounded-xl border border-white/10 h-fit space-y-6">
                   <div>
-                    <div className="flex items-center text-sm font-medium text-slate-500 mb-1">
-                      <MapPin className="w-4 h-4 mr-2" /> Ubicación
+                    <div className="flex items-center text-sm font-medium text-muted-foreground mb-1">
+                      <MapPin className="w-4 h-4 mr-2 text-primary" /> Ubicación
                     </div>
                     <p className="font-medium text-foreground">{selectedProject.location}</p>
                   </div>
                   
                   <div>
-                    <div className="flex items-center text-sm font-medium text-slate-500 mb-1">
-                      <Calendar className="w-4 h-4 mr-2" /> Año
+                    <div className="flex items-center text-sm font-medium text-muted-foreground mb-1">
+                      <Calendar className="w-4 h-4 mr-2 text-primary" /> Año
                     </div>
                     <p className="font-medium text-foreground">{selectedProject.year}</p>
                   </div>
                   
                   <div>
-                    <div className="flex items-center text-sm font-medium text-slate-500 mb-1">
-                      <CheckCircle2 className="w-4 h-4 mr-2" /> Entregables
+                    <div className="flex items-center text-sm font-medium text-muted-foreground mb-1">
+                      <CheckCircle2 className="w-4 h-4 mr-2 text-primary" /> Entregables
                     </div>
                     <p className="font-medium text-foreground text-sm">{selectedProject.deliverables}</p>
                   </div>
                   
                   <div>
-                    <div className="flex items-center text-sm font-medium text-slate-500 mb-2">
-                      <Wrench className="w-4 h-4 mr-2" /> Herramientas
+                    <div className="flex items-center text-sm font-medium text-muted-foreground mb-2">
+                      <Wrench className="w-4 h-4 mr-2 text-primary" /> Herramientas
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {selectedProject.tools.map(tool => (
-                        <span key={tool} className="text-xs bg-white border border-border px-2 py-1 rounded">
+                        <span key={tool} className="text-xs bg-background border border-white/10 px-2 py-1 rounded text-muted-foreground">
                           {tool}
                         </span>
                       ))}
@@ -154,11 +156,11 @@ export function Projects() {
                 </div>
               </div>
               
-              <div className="mt-8 pt-6 border-t border-border flex justify-end">
+              <div className="mt-8 pt-6 border-t border-white/10 flex justify-end">
                 <a 
                   href={`#contacto?project=${selectedProject.id}`}
                   onClick={() => setSelectedProject(null)}
-                  className="bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-primary/90 transition-colors"
+                  className="bg-primary text-white px-8 py-3 rounded-md font-medium hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
                 >
                   Quiero un proyecto similar
                 </a>
@@ -168,5 +170,7 @@ export function Projects() {
         )}
       </Dialog>
     </section>
+  );
+}
   );
 }

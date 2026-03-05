@@ -19,8 +19,11 @@ export function Services() {
   };
 
   return (
-    <section id="servicios" className="py-24 bg-white">
-      <div className="container mx-auto px-4 md:px-8 max-w-7xl">
+    <section id="servicios" className="py-24 bg-background relative overflow-hidden">
+      {/* Subtle glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
+      
+      <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
         <div className="text-center mb-16 max-w-2xl mx-auto">
           <h2 className="text-sm font-bold text-primary tracking-wider uppercase mb-3">Nuestras Especialidades</h2>
           <h3 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">Servicios Integrales de Ingeniería</h3>
@@ -33,9 +36,11 @@ export function Services() {
           {servicesData.map((service) => (
             <div 
               key={service.id} 
-              className="bg-white border border-border p-8 rounded-xl hover:shadow-lg transition-all duration-300 group hover:border-primary/30 flex flex-col h-full"
+              className="bg-card border border-white/5 p-8 rounded-xl hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all duration-500 group hover:border-primary/50 flex flex-col h-full relative overflow-hidden"
             >
-              <div className="text-primary mb-6 bg-primary/5 w-16 h-16 rounded-lg flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full -mr-12 -mt-12 group-hover:bg-primary/10 transition-colors"></div>
+              
+              <div className="text-primary mb-6 bg-primary/10 w-16 h-16 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                 {iconMap[service.icon]}
               </div>
               

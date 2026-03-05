@@ -30,30 +30,32 @@ export function Process() {
   ];
 
   return (
-    <section id="proceso" className="py-24 bg-white">
-      <div className="container mx-auto px-4 md:px-8 max-w-7xl">
+    <section id="proceso" className="py-24 bg-background relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 blur-[150px] rounded-full pointer-events-none"></div>
+      
+      <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
         <div className="text-center mb-16 max-w-2xl mx-auto">
           <h2 className="text-sm font-bold text-primary tracking-wider uppercase mb-3">Metodología</h2>
           <h3 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">Proceso de Trabajo</h3>
           <p className="text-muted-foreground text-lg">
-            Un enfoque estructurado que garantiza la calidad, cumplimiento normativo y trazabilidad en cada etapa.
+            Un enfoque estructurado que garantiza la calidad y cumplimiento normativo en cada etapa.
           </p>
         </div>
 
         <div className="relative">
           {/* Connecting line for desktop */}
-          <div className="hidden lg:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-border z-0"></div>
+          <div className="hidden lg:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-white/5 z-0"></div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {steps.map((step, index) => (
               <div key={index} className="relative z-10 flex flex-col items-center text-center group">
-                <div className="w-24 h-24 rounded-2xl bg-slate-50 border-2 border-border flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:border-primary group-hover:text-white transition-all duration-300 shadow-sm relative">
+                <div className="w-24 h-24 rounded-2xl bg-card border border-white/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:border-primary group-hover:text-white transition-all duration-500 shadow-[0_0_20px_rgba(0,0,0,0.3)] relative">
                   {step.icon}
-                  <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-foreground text-white flex items-center justify-center font-bold text-sm">
+                  <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm shadow-lg">
                     {index + 1}
                   </div>
                 </div>
-                <h4 className="text-lg font-heading font-bold text-foreground mb-3">{step.title}</h4>
+                <h4 className="text-lg font-heading font-bold text-foreground mb-3 group-hover:text-primary transition-colors">{step.title}</h4>
                 <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
               </div>
             ))}
