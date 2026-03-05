@@ -1,0 +1,229 @@
+Desarrolla un sitio web corporativo moderno para “Marquez & Aguirre Ingeniería (M&A)”, una empresa en Chile que presta servicios de ingeniería estructural, sanitaria, eléctrica (TE1), IMIV, permisos de edificación, regularizaciones, obras menores y apoyo técnico integral.
+Objetivo principal: generar confianza, mostrar servicios/proyectos y captar contactos/cotizaciones. No se requieren pagos ni e-commerce.
+
+BRANDING (usar logo adjunto)
+
+Usar el logo de M&A en navbar, loading y footer.
+
+Paleta basada en el logo:
+
+Fondo: blanco #FFFFFF
+
+Texto principal: negro #0A0A0A
+
+Acento principal (azul M&A): #2F2F92
+
+Neutros (para bordes/lineas/sombras suaves): #D1D2E3, #8786A1
+
+Estilo: sobrio, técnico, confiable, tipo “estudio/consultora de ingeniería”.
+
+Tipografía: sans-serif moderna y geométrica para títulos (estilo Outfit/Inter), sans-serif legible para párrafos. Opcional: monospace solo para micro-detalles técnicos (muy sutil).
+
+ESTRUCTURA DEL SITIO
+
+Construir como Single Page con secciones (y opcional páginas internas para “Servicios” y “Proyectos”).
+Navegación fija superior con enlaces: Inicio / Servicios / Proyectos / Proceso / Sobre nosotros / Contacto.
+
+HERO SECTION (primer pantallazo)
+
+Diseño centrado, limpio, con alto “whitespace”.
+
+Título grande: “Marquez & Aguirre Ingeniería”
+
+Subtítulo: “Ingeniería y permisos para proyectos en Chile”
+
+Frase breve de valor:
+
+“Diseñamos, calculamos y tramitamos con foco en seguridad, normativa y plazos.”
+
+Botones CTA:
+
+Primario: “Solicitar cotización”
+
+Secundario: “Ver servicios”
+
+Detalle de confianza bajo el CTA (en chips):
+
+“Estructural” · “Sanitaria” · “Eléctrica (TE1)” · “IMIV” · “Permisos y regularizaciones”
+
+Animación sutil: fade/slide al cargar + indicador de scroll.
+
+SECCIÓN SERVICIOS (cards claras, orientación a negocio)
+
+Grid de cards (2–3 columnas desktop, 1 columna mobile). Cada card con ícono lineal, título y bullets.
+
+Servicios sugeridos (mínimo):
+
+Ingeniería Estructural
+
+Modelación y cálculo · Memorias · Planos · Especificaciones
+
+Ingeniería Sanitaria
+
+Agua potable · Alcantarillado · Aguas lluvias · Soluciones de infiltración
+
+Ingeniería Eléctrica (TE1)
+
+Diseño y regularización · Memorias · Planos · coordinación normativa (según aplique)
+
+IMIV
+
+Informes y tramitación · coordinación con arquitectura/urbanismo
+
+Permisos de Edificación
+
+Expedientes · coordinación de especialidades · apoyo en observaciones
+
+Regularizaciones
+
+Levantamiento · antecedentes · planos as-built · informes técnicos
+
+Obras menores / apoyo a construcción
+
+Detalles · cubicaciones básicas · soporte técnico y coordinación
+
+Cada servicio con botón: “Consultar” que haga scroll a Contacto y preseleccione el tipo de proyecto.
+
+PROYECTOS DESTACADOS (portafolio tipo “casos”)
+
+Layout tipo Bento grid (cards de distintos tamaños).
+
+Cada proyecto incluye:
+
+Imagen/thumbnail (puede ser mockup genérico si no hay fotos)
+
+Nombre del proyecto (placeholder)
+
+Disciplina: Estructural / Sanitaria / Eléctrica / IMIV / Permisos
+
+Ubicación: (Ciudad, Chile) (placeholder)
+
+Tags: “Memoria de cálculo”, “Planos”, “Tramitación”, etc.
+
+Hover: zoom suave + overlay “Ver detalle”.
+
+Detalle de proyecto (modal o página):
+
+Resumen con: tipo, año (placeholder), alcance, entregables, herramientas (genéricas), desafíos/solución.
+
+Galería de imágenes.
+
+CTA: “Quiero un proyecto similar”.
+
+SECCIÓN “POR QUÉ M&A” (confianza y diferenciación)
+
+Bloques con íconos:
+
+Enfoque en normativa vigente y seguridad
+
+Coordinación integral con arquitectura y especialidades
+
+Entregables claros: memorias, planos, especificaciones y apoyo en tramitación
+
+Comunicación profesional y seguimiento
+
+Añadir mini-métricas solo como placeholders editables (sin inventar números):
+
+“+X proyectos” / “+X clientes” / “X regiones” → editable desde un archivo de configuración.
+
+PROCESO DE TRABAJO (ingeniería + permisos)
+
+Timeline de 5 pasos con íconos:
+
+Levantamiento y alcance
+
+Antecedentes y coordinación
+
+Ingeniería / desarrollo de entregables
+
+Revisión y ajustes
+
+Tramitación y apoyo hasta cierre
+
+SOBRE NOSOTROS (tono corporativo)
+
+Layout split:
+
+Izquierda: imagen corporativa/placeholder (o foto del equipo si existe)
+
+Derecha:
+
+2–3 párrafos profesionales (sin prometer certificaciones específicas)
+
+Lista de disciplinas y enfoque
+
+Botón opcional: “Descargar dossier PDF” (si no existe, dejar como placeholder deshabilitado o con texto “Próximamente”).
+
+TESTIMONIALES / CLIENTES (opcional pero recomendado)
+
+Slider minimalista con 2–3 testimonios (placeholders editables).
+
+Logos en gris que se colorean al hover.
+
+CONTACTO (conversión)
+
+Sección destacada con fondo #2F2F92 y texto blanco.
+
+Headline: “¿Tienes un proyecto en mente?”
+
+Subheadline: “Cuéntanos tu necesidad y te contactamos.”
+
+Formulario:
+
+Nombre y apellido
+
+Empresa (opcional)
+
+Email
+
+Teléfono (opcional)
+
+Ciudad/Región
+
+Tipo de proyecto (dropdown: Estructural, Sanitaria, Eléctrica, IMIV, Permisos, Regularización, Obras menores, Otro)
+
+Mensaje
+
+Botón “Enviar” con loading.
+
+Alternativas:
+
+Botón WhatsApp (link configurable)
+
+Email directo
+
+LinkedIn (si existe)
+
+Importante: implementar el formulario para que funcione (EmailJS/Formspree/endpoint simple en backend). Si falta configuración, mostrar mensaje claro “Falta configurar destinatario” en modo desarrollo.
+
+FOOTER
+
+Logo pequeño + “Marquez & Aguirre Ingeniería”
+
+Links rápidos
+
+Año dinámico
+
+Mensaje: “Atendemos proyectos en Chile”
+
+CARACTERÍSTICAS TÉCNICAS Y UX
+
+Diseño responsive (mobile primero).
+
+Smooth scroll + animaciones sutiles (Framer Motion o equivalente).
+
+Performance: lazy loading de imágenes.
+
+Accesibilidad: contraste correcto, focus visible, labels.
+
+SEO básico: title, description, Open Graph.
+
+Modo oscuro: opcional (mantener identidad, azul M&A como acento).
+
+CONTENIDO
+
+Todo el contenido en español (Chile), tono formal y claro.
+
+Evitar claims no verificables (certificaciones, números reales). Usar placeholders editables.
+
+Dejar una estructura fácil de editar (por ejemplo data/services.json y data/projects.json).
