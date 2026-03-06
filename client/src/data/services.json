@@ -3,42 +3,54 @@
     "id": "estructural",
     "title": "Ingeniería Estructural",
     "icon": "building",
-    "features": ["Modelación y cálculo", "Memorias", "Planos", "Especificaciones"]
+    "features": ["Edificios", "Galpones", "Muros de contención", "Estabilidad de taludes"]
   },
   {
     "id": "sanitaria",
     "title": "Ingeniería Sanitaria",
     "icon": "droplets",
-    "features": ["Agua potable", "Alcantarillado", "Aguas lluvias", "Soluciones de infiltración"]
+    "features": ["Proyectos domiciliarios", "Agua Potable sin fuente propia", "Sistemas de tratamiento e infiltración", "Acumulación e impulsión"]
   },
   {
     "id": "electrica",
     "title": "Ingeniería Eléctrica (TE1)",
     "icon": "zap",
-    "features": ["Diseño y regularización", "Memorias", "Planos", "Coordinación normativa"]
+    "features": ["Proyectos eléctricos", "Diseño fotovoltaico", "Informes de brechas normativas"]
   },
   {
     "id": "imiv",
     "title": "IMIV",
     "icon": "car",
-    "features": ["Informes y tramitación", "Coordinación con arquitectura/urbanismo"]
+    "features": ["Informe de mitigación de Impacto Vial Básico", "Informe de mitigación de Impacto Vial Intermedio"]
   },
   {
     "id": "permisos",
     "title": "Permisos de Edificación",
     "icon": "file-check",
-    "features": ["Expedientes", "Coordinación de especialidades", "Apoyo en observaciones"]
+    "features": ["Proyecto de Arquitectura", "Regularizaciones"]
   },
   {
-    "id": "regularizaciones",
-    "title": "Regularizaciones",
+    "id": "ifc",
+    "title": "IFC SAG/MINVU",
     "icon": "clipboard-list",
-    "features": ["Levantamiento", "Antecedentes", "Planos as-built", "Informes técnicos"]
+    "features": ["Informe favorable para la construcción"]
   },
   {
     "id": "obras-menores",
-    "title": "Obras menores / Apoyo",
+    "title": "Obras Menores",
     "icon": "hammer",
-    "features": ["Detalles", "Cubicaciones básicas", "Soporte técnico y coordinación"]
+    "features": ["Instalaciones eléctricas", "Instalaciones sanitarias"]
+  },
+  {
+    "id": "seremi",
+    "title": "SEREMI de Salud",
+    "icon": "shield-check",
+    "features": ["Sustancias peligrosas", "Residuos Peligrosos", "Residuos No peligrosos"]
+  },
+  {
+    "id": "calificacion",
+    "title": "Calificación Industrial",
+    "icon": "factory",
+    "features": ["Calificación Industrial", "Informe Sanitario"]
   }
 ]

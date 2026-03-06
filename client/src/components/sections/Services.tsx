@@ -1,4 +1,4 @@
-import { Building, Droplets, Zap, Car, FileCheck, ClipboardList, Hammer, ArrowRight } from "lucide-react";
+import { Building, Droplets, Zap, Car, FileCheck, ClipboardList, Hammer, ArrowRight, ShieldCheck, Factory } from "lucide-react";
 import servicesData from "../../data/services.json";
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -8,14 +8,17 @@ const iconMap: Record<string, React.ReactNode> = {
   car: <Car className="w-8 h-8" />,
   "file-check": <FileCheck className="w-8 h-8" />,
   "clipboard-list": <ClipboardList className="w-8 h-8" />,
-  hammer: <Hammer className="w-8 h-8" />
+  hammer: <Hammer className="w-8 h-8" />,
+  "shield-check": <ShieldCheck className="w-8 h-8" />,
+  factory: <Factory className="w-8 h-8" />
 };
 
 export function Services() {
   const handleConsultar = (serviceId: string) => {
-    // We will pass this to the contact form via URL hash or state
-    // For simple implementation, scroll to contact and we could use a query param
-    window.location.hash = `#contacto?service=${serviceId}`;
+    const contactSection = document.getElementById('contacto');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (

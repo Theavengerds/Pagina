@@ -155,13 +155,18 @@ export function Projects() {
               </div>
               
               <div className="mt-8 pt-6 border-t border-slate-200 flex justify-end">
-                <a 
-                  href={`#contacto?project=${selectedProject.id}`}
-                  onClick={() => setSelectedProject(null)}
+                <button 
+                  onClick={() => {
+                    setSelectedProject(null);
+                    const contactSection = document.getElementById('contacto');
+                    if (contactSection) {
+                      contactSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
                   className="bg-primary text-white px-8 py-3 rounded-md font-medium hover:bg-primary/90 transition-all shadow-md shadow-primary/20"
                 >
                   Quiero un proyecto similar
-                </a>
+                </button>
               </div>
             </div>
           </DialogContent>
