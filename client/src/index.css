@@ -30,36 +30,36 @@
 }
 
 :root {
-  /* Fondo: azul muy oscuro/negro para elegancia #050505 */
-  --background: 240 10% 4%;
-  /* Texto principal: blanco roto #F8F9FA */
-  --foreground: 210 20% 98%;
+  /* Fondo: Blanco suave con un toque de azul para elegancia #F8FAFC */
+  --background: 210 40% 98%;
+  /* Texto principal: Azul muy oscuro casi negro #0F172A */
+  --foreground: 222 47% 11%;
   
-  --card: 240 10% 8%;
-  --card-foreground: 210 20% 98%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
   
-  --popover: 240 10% 6%;
-  --popover-foreground: 210 20% 98%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
   
-  /* Acento principal (azul M&A extraído del logo): #2F2F92 */
+  /* Acento principal (azul M&A): #2F2F92 */
   --primary: 240 51% 38%;
   --primary-foreground: 0 0% 100%;
   
-  --secondary: 240 10% 15%;
-  --secondary-foreground: 210 20% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 240 51% 38%;
   
-  /* Neutros para bordes y sombras ajustados a fondo oscuro */
-  --muted: 240 10% 12%;
-  --muted-foreground: 240 5% 65%;
+  /* Neutros para bordes y sombras ajustados a fondo claro */
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
   
-  --accent: 240 10% 20%;
-  --accent-foreground: 0 0% 100%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222 47% 11%;
   
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
   
-  --border: 240 10% 15%;
-  --input: 240 10% 15%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
   --ring: 240 51% 38%;
 }
 
@@ -75,7 +75,7 @@
   }
 }
 
-/* Glassmorphism utility */
+/* Glassmorphism utility adjusted for light mode */
 .glass {
-  @apply bg-white/5 backdrop-blur-md border border-white/10;
+  @apply bg-white/70 backdrop-blur-md border border-white/20;
 }

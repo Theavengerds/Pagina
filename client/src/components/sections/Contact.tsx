@@ -47,55 +47,55 @@ export function Contact() {
   };
 
   return (
-    <section id="contacto" className="py-24 bg-background relative overflow-hidden border-t border-white/5">
-      <div className="absolute bottom-0 left-0 w-full h-1/2 bg-primary/5 blur-[120px] pointer-events-none"></div>
+    <section id="contacto" className="py-24 bg-white relative overflow-hidden border-t border-slate-100">
+      <div className="absolute bottom-0 left-0 w-full h-1/2 bg-slate-50 pointer-events-none"></div>
       
       <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-8">
           
           <div className="lg:col-span-2">
             <h2 className="text-sm font-bold text-primary tracking-wider uppercase mb-3">Contacto</h2>
-            <h3 className="text-3xl md:text-5xl font-heading font-bold mb-6 text-foreground leading-tight">
+            <h3 className="text-3xl md:text-5xl font-heading font-bold mb-6 text-slate-900 leading-tight">
               ¿Tienes un proyecto en mente?
             </h3>
-            <p className="text-muted-foreground text-lg mb-10 max-w-md">
+            <p className="text-slate-600 text-lg mb-10 max-w-md">
               Cuéntanos tu necesidad y nuestro equipo técnico te contactará a la brevedad para asesorarte.
             </p>
             
             <div className="space-y-8">
               <div className="flex items-start group">
-                <div className="w-12 h-12 bg-primary/10 border border-primary/20 rounded-xl flex items-center justify-center mr-5 shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                <div className="w-12 h-12 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-center mr-5 shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-300">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
                   <p className="text-xs font-bold text-primary uppercase tracking-widest mb-1">Email</p>
-                  <a href="mailto:contacto@myasingenieria.cl" className="text-lg font-medium hover:text-primary transition-colors">
+                  <a href="mailto:contacto@myasingenieria.cl" className="text-lg font-medium hover:text-primary transition-colors text-slate-900">
                     contacto@myasingenieria.cl
                   </a>
                 </div>
               </div>
               
               <div className="flex items-start group">
-                <div className="w-12 h-12 bg-primary/10 border border-primary/20 rounded-xl flex items-center justify-center mr-5 shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                <div className="w-12 h-12 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-center mr-5 shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-300">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
                   <p className="text-xs font-bold text-primary uppercase tracking-widest mb-1">WhatsApp</p>
-                  <a href="#" className="text-lg font-medium hover:text-primary transition-colors">
+                  <a href="#" className="text-lg font-medium hover:text-primary transition-colors text-slate-900">
                     +56 9 1234 5678
                   </a>
                 </div>
               </div>
               
               <div className="flex items-start group">
-                <div className="w-12 h-12 bg-primary/10 border border-primary/20 rounded-xl flex items-center justify-center mr-5 shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                <div className="w-12 h-12 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-center mr-5 shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-300">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
                   <p className="text-xs font-bold text-primary uppercase tracking-widest mb-1">Ubicación</p>
-                  <p className="text-lg font-medium text-foreground">
+                  <p className="text-lg font-medium text-slate-900">
                     Santiago, Chile.<br/>
-                    <span className="text-sm font-normal text-muted-foreground">Proyectos a nivel nacional.</span>
+                    <span className="text-sm font-normal text-slate-500">Proyectos a nivel nacional.</span>
                   </p>
                 </div>
               </div>
@@ -103,25 +103,23 @@ export function Contact() {
           </div>
           
           <div className="lg:col-span-3">
-            <div className="bg-card rounded-2xl p-8 md:p-10 shadow-2xl border border-white/5 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl pointer-events-none"></div>
-              
+            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-2xl border border-slate-100 relative overflow-hidden">
               <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2">Nombre y apellido *</label>
+                    <label className="block text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">Nombre y apellido *</label>
                     <input 
                       type="text" 
                       required
-                      className="w-full px-4 py-4 rounded-lg border border-white/10 bg-background focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-foreground"
+                      className="w-full px-4 py-4 rounded-lg border border-slate-200 bg-slate-50 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-slate-900"
                       placeholder="Ej. Juan Pérez"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2">Empresa</label>
+                    <label className="block text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">Empresa</label>
                     <input 
                       type="text" 
-                      className="w-full px-4 py-4 rounded-lg border border-white/10 bg-background focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-foreground"
+                      className="w-full px-4 py-4 rounded-lg border border-slate-200 bg-slate-50 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-slate-900"
                       placeholder="Opcional"
                     />
                   </div>
@@ -129,19 +127,19 @@ export function Contact() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2">Email *</label>
+                    <label className="block text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">Email *</label>
                     <input 
                       type="email" 
                       required
-                      className="w-full px-4 py-4 rounded-lg border border-white/10 bg-background focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-foreground"
+                      className="w-full px-4 py-4 rounded-lg border border-slate-200 bg-slate-50 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-slate-900"
                       placeholder="correo@ejemplo.com"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2">Teléfono</label>
+                    <label className="block text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">Teléfono</label>
                     <input 
                       type="tel" 
-                      className="w-full px-4 py-4 rounded-lg border border-white/10 bg-background focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-foreground"
+                      className="w-full px-4 py-4 rounded-lg border border-slate-200 bg-slate-50 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-slate-900"
                       placeholder="+56 9"
                     />
                   </div>
@@ -149,20 +147,20 @@ export function Contact() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2">Ciudad / Región</label>
+                    <label className="block text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">Ciudad / Región</label>
                     <input 
                       type="text" 
-                      className="w-full px-4 py-4 rounded-lg border border-white/10 bg-background focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-foreground"
+                      className="w-full px-4 py-4 rounded-lg border border-slate-200 bg-slate-50 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-slate-900"
                       placeholder="Ej. Valparaíso"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2">Tipo de proyecto *</label>
+                    <label className="block text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">Tipo de proyecto *</label>
                     <select 
                       required
                       value={selectedService}
                       onChange={(e) => setSelectedService(e.target.value)}
-                      className="w-full px-4 py-4 rounded-lg border border-white/10 bg-background focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-foreground appearance-none"
+                      className="w-full px-4 py-4 rounded-lg border border-slate-200 bg-slate-50 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-slate-900 appearance-none"
                     >
                       <option value="" disabled>Seleccione una opción</option>
                       <option value="Estructural">Ingeniería Estructural</option>
@@ -178,11 +176,11 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2">Mensaje *</label>
+                  <label className="block text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">Mensaje *</label>
                   <textarea 
                     required
                     rows={4}
-                    className="w-full px-4 py-4 rounded-lg border border-white/10 bg-background focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-foreground resize-none"
+                    className="w-full px-4 py-4 rounded-lg border border-slate-200 bg-slate-50 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-slate-900 resize-none"
                     placeholder="Describa su requerimiento..."
                   ></textarea>
                 </div>

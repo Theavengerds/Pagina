@@ -5,12 +5,12 @@ export function Footer() {
   const logoUrl = "https://res.cloudinary.com/dlimdjyod/image/upload/v1772682467/MA_ingenieria_logo_opcion1_transparente_n7ydyf.png";
 
   return (
-    <footer className="bg-background text-white/50 py-16 border-t border-white/5">
+    <footer className="bg-slate-900 text-white/50 py-16">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-2">
             <div className="flex items-center gap-4 mb-6 text-white">
-              <img src={logoUrl} alt="M&A Logo" className="h-12" />
+              <img src={logoUrl} alt="M&A Logo" className="h-12 brightness-0 invert" />
               <span className="font-heading font-semibold text-xl tracking-tight">
                 Marquez & Aguirre Ingeniería
               </span>
