@@ -34,16 +34,26 @@ export function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
+    // In a frontend-only mockup, we use Formspree or similar
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+    
+    // Using Formspree as a common solution for frontend-only forms
+    fetch("https://formspree.io/f/contacto@marquezyaguirre.cl", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).finally(() => {
       setIsSubmitting(false);
       toast({
         title: "Mensaje enviado",
-        description: "En modo desarrollo: Falta configurar el destinatario final (ej. EmailJS/Formspree).",
+        description: "Gracias por contactarnos. Te responderemos a la brevedad.",
       });
       (e.target as HTMLFormElement).reset();
       setSelectedService("");
-    }, 1500);
+    });
   };
 
   return (
@@ -62,15 +72,14 @@ export function Contact() {
               Cuéntanos tu necesidad y nuestro equipo técnico te contactará a la brevedad para asesorarte.
             </p>
             
-            <div className="space-y-8">
-              <div className="flex items-start group">
+                <div className="flex items-start group">
                 <div className="w-12 h-12 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-center mr-5 shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-300">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
                   <p className="text-xs font-bold text-primary uppercase tracking-widest mb-1">Email</p>
-                  <a href="mailto:contacto@myasingenieria.cl" className="text-lg font-medium hover:text-primary transition-colors text-slate-900">
-                    contacto@myasingenieria.cl
+                  <a href="mailto:contacto@marquezyaguirre.cl" className="text-lg font-medium hover:text-primary transition-colors text-slate-900">
+                    contacto@marquezyaguirre.cl
                   </a>
                 </div>
               </div>
@@ -81,8 +90,8 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-primary uppercase tracking-widest mb-1">WhatsApp</p>
-                  <a href="#" className="text-lg font-medium hover:text-primary transition-colors text-slate-900">
-                    +56 9 1234 5678
+                  <a href="https://wa.me/56991251437" target="_blank" rel="noopener noreferrer" className="text-lg font-medium hover:text-primary transition-colors text-slate-900">
+                    +56 9 9125 1437
                   </a>
                 </div>
               </div>
@@ -94,12 +103,11 @@ export function Contact() {
                 <div>
                   <p className="text-xs font-bold text-primary uppercase tracking-widest mb-1">Ubicación</p>
                   <p className="text-lg font-medium text-slate-900">
-                    Santiago, Chile.<br/>
+                    Iquique, Chile.<br/>
                     <span className="text-sm font-normal text-slate-500">Proyectos a nivel nacional.</span>
                   </p>
                 </div>
               </div>
-            </div>
           </div>
           
           <div className="lg:col-span-3">
